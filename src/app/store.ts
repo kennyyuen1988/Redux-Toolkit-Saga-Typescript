@@ -4,6 +4,7 @@ import authReducer from 'features/auth/authSlice';
 import cityReducer from 'features/city/citySlice';
 import dashboardReducer from 'features/dashboard/dashboardSlice';
 import studentReducer from 'features/student/studentSlice';
+import userReducer from 'features/porting/portingSlice'
 import createSagaMiddleware from 'redux-saga';
 import { history } from 'utils';
 import rootSaga from './rootSaga';
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   dashboard: dashboardReducer,
   student: studentReducer,
   city: cityReducer,
+  user: userReducer,
 })
 
 const sagaMiddleware = createSagaMiddleware()
